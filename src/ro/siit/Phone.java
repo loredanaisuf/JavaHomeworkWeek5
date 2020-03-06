@@ -1,10 +1,12 @@
 package ro.siit;
 
 public interface Phone {
-    void addContact(int nrCrt, String number, String firstName, String lastName);
+
+
+    void addContact(String nrCrt, String number, String firstName, String lastName);
     void seeExistingContacts();
-    void sendMessage();
+    void sendMessage(String phoneNumber, String message);
     void seeAllMassages();
-    void makeCall();
+    void makeCall(String phoneNumber);
     void seeAllCalls();
 }

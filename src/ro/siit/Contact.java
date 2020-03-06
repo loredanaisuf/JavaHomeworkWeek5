@@ -1,12 +1,14 @@
 package ro.siit;
 
+import javax.print.DocFlavor;
+
 public class Contact {
-    private int nrCrt;
+    private String nrCrt;
     private String number;
     private String firstName;
     private String lastName;
 
-    public Contact(int nrCrt, String number, String firstName, String lastName){
+    public Contact(String nrCrt, String number, String firstName, String lastName){
         this.nrCrt=nrCrt;
         this.number=number;
         this.firstName=firstName;
