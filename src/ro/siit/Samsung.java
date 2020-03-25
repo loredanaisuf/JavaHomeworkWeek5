@@ -3,15 +3,15 @@ package ro.siit;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Iphone implements Phone {
+public abstract class Samsung implements Phone {
     protected List<Contact> contacts=new ArrayList<>();
-    protected String color;
+    protected String culoare;
     protected String material;
     protected long imei;
-    protected int batteryLife=24;
+    protected int batteryLife=30;
 
-    public Iphone(String color, String material, long imei) {
-        this.color = color;
+    public Samsung(String culoare, String material, long imei) {
+        this.culoare = culoare;
         this.material = material;
         this.imei = imei;
     }
@@ -30,11 +30,12 @@ public abstract class Iphone implements Phone {
         return auxContacts;
     }
 
-    public void setColor(String color){
-        this.color = color;
+    public void setMaterial(String material){
+        this.material = material;
     }
 
     public int getBatteryLife(){
         return batteryLife;
     }
 }
+

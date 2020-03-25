@@ -3,11 +3,11 @@ package ro.siit;
 import java.util.ArrayList;
 import java.util.List;
 
-public class iPhone7 extends Iphone {
+public class SamsungS6 extends Samsung {
     List<Message> messages = new ArrayList<>();
     List<String> calls = new ArrayList<>();
 
-    public iPhone7(String culoare, String material, long imei) {
+    public SamsungS6(String culoare, String material, long imei) {
         super(culoare, material, imei);
     }
 
