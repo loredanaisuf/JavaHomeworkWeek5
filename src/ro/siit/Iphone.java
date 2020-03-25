@@ -8,7 +8,7 @@ public abstract class Iphone implements Phone {
     protected String culoare;
     protected String material;
     protected long imei;
-    int bateryLife=24;
+    protected int batteryLife=24;
 
     public Iphone(String culoare, String material, long imei) {
         this.culoare = culoare;
@@ -23,8 +23,14 @@ public abstract class Iphone implements Phone {
     }
 
     @Override
-    public void seeExistingContacts() {
-        for(Contact contact:contacts)
-            System.out.println(contact);
+    public List<Contact> seeExistingContacts() {
+        List<Contact> auxContacts=new ArrayList<>();
+        for(Contact c : contacts)
+            auxContacts.add(c);
+        return auxContacts;
+    }
+
+    public int getBatteryLife(){
+        return batteryLife;
     }
 }

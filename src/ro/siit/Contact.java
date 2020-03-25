@@ -17,6 +17,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Nr crt: " + this.nrCrt + "Number: " + this.number + "First name: " + this.firstName + "Last name: "+ this.lastName;
+        return "\n" + "Nr crt: " + this.nrCrt + ", Number: " + this.number + ", First name: " + this.firstName + ", Last name: "+ this.lastName ;
     }
 }

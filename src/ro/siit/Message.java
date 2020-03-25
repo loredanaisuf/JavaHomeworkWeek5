@@ -11,6 +11,6 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Phone number: "+this.phoneNumber+" Message: "+this.message;
+        return "\n" +"Phone number: "+this.phoneNumber+"; Message: "+this.message ;
     }
 }
