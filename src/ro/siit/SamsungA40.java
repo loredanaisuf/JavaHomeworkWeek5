@@ -1,13 +1,9 @@
 package ro.siit;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SamsungS6 extends Samsung {
-
-    public SamsungS6(String culoare, String material, long imei) {
+public class SamsungA40 extends Samsung{
+    public SamsungA40(String culoare, String material, long imei) {
         super(culoare, material, imei);
-        this.batteryLife = 24;
+        this.batteryLife = 30;
     }
 
     public void setMaterial(String material){

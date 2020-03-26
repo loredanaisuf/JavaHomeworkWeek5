@@ -8,7 +8,9 @@ public abstract class Iphone implements Phone {
     protected String color;
     protected String material;
     protected long imei;
-    protected int batteryLife=24;
+    protected int batteryLife;
+    protected List<Message> messages = new ArrayList<>();
+    protected List<String> calls = new ArrayList<>();
 
     public Iphone(String color, String material, long imei) {
         this.color = color;
@@ -30,11 +32,36 @@ public abstract class Iphone implements Phone {
         return auxContacts;
     }
 
-    public void setColor(String color){
-        this.color = color;
+    @Override
+    public void sendMessage(String phoneNumber, String message) {
+        if(message.length()<500) {
+            Message msg = new Message(phoneNumber, message);
+            messages.add(msg);
+            batteryLife--;
+        } else{
+            System.out.println("The message must be lower than 500 characters");
+        }
     }
 
-    public int getBatteryLife(){
-        return batteryLife;
+    @Override
+    public List<Message> seeAllMassages() {
+        List<Message> auxMessages =  new ArrayList<>();
+        for(Message m:messages)
+            auxMessages.add(m);
+        return auxMessages;
+    }
+
+    @Override
+    public void makeCall(String phoneNumber) {
+        calls.add(phoneNumber);
+        batteryLife -=2;
+    }
+
+    @Override
+    public List<String> seeAllCalls() {
+        List<String> auxCalls = new ArrayList<>();
+        for(String c : calls)
+            auxCalls.add(c);
+        return auxCalls;
     }
 }
